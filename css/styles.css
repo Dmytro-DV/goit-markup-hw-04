@@ -29,9 +29,11 @@ p, h1,h2,h3,h4,h5,h6 {
     margin-bottom: 0;
 }
 
+/* -----------HEADER--------- */
+
 .header {
     border-bottom: 1px solid #E7E9FC;
-    box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .container {
@@ -58,8 +60,6 @@ p, h1,h2,h3,h4,h5,h6 {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     margin-right: 76px;
-    padding-top: 25.5px;
-    padding-bottom: 25.5px;
 }
 
 .header-logo-diff {
@@ -69,6 +69,11 @@ p, h1,h2,h3,h4,h5,h6 {
 .header-menu {
     display: flex;
     gap: 40px;
+    padding: 24px 0;
+}
+
+.menu-list {
+    color: #2E2F42;
 }
 
 .header-menu::after {
@@ -81,12 +86,12 @@ p, h1,h2,h3,h4,h5,h6 {
 
 .header-link {
     position: relative;
-    color: #2E2F42;
+    padding: 24px 0;
+    color: inherit;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    padding: 24px 0;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -102,25 +107,48 @@ p, h1,h2,h3,h4,h5,h6 {
 
 .header-link:hover, .header-link:focus {
     color: #404BBF;
+}
+
+.active-link {
+    color: #404BBF;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.current-item::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+    border-radius: 2px;
+    width: 100%;
+    background-color: #404BBF;
+    display: block;
+}
+
 .search {
+    margin-left: auto;
     font-style: normal;
-    padding: 24px 0 24px 332px;
 }
 
 .search-menu {
     display: flex;
     gap: 40px;
-    align-items: center;
+    padding: 24px 0;
+}
+
+.adress-list {
+    justify-content: center;
+    font: normal;
 }
 
 .search-info {
-    color: #434455;
     font-size: 16px;
+    font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    display: block;
+    align-items: center;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -129,6 +157,8 @@ p, h1,h2,h3,h4,h5,h6 {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* ----------------------------- */
+/* -----------SECTION 1--------- */
 .headline {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
     background-repeat: no-repeat;
@@ -179,6 +209,9 @@ p, h1,h2,h3,h4,h5,h6 {
 .headline-btn:hover, .headline-btn:focus {
     background-color: #404BBF;
 }
+
+/* ----------------------------- */
+/* -----------SECTION 2--------- */
 
 .title {
     padding: 120px 0;
@@ -237,6 +270,9 @@ p, h1,h2,h3,h4,h5,h6 {
         line-height: 1.5;
         letter-spacing: 0.02em;
 }
+
+/* ----------------------------- */
+/* -----------SECTION 3--------- */
 
 .caption {
     background-color: #F4F4FD;
@@ -327,6 +363,9 @@ p, h1,h2,h3,h4,h5,h6 {
 .icon-link:hover {
 }
 
+/* ----------------------------- */
+/* -----------SECTION 4--------- */
+
 .subject {
     padding: 120px 0;
 }
@@ -407,6 +446,9 @@ p, h1,h2,h3,h4,h5,h6 {
         line-height: 1.5;
         letter-spacing: 0.02em;
 }
+
+/* ----------------------------- */
+/* ------------FOOTER----------- */
 
 .footer {
     background-color:#2E2F42;
